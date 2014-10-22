@@ -1,0 +1,23 @@
+<!-- Tabs -->
+		<section class="tab">
+					<ul class="nav nav-pills">
+						<li ng-class="{ active: tab.isSet(1) }">
+							<a href ng-click="tab.setTab(1)">Movie Info</a></li>
+						<li ng-class="{ active: tab.isSet(2) }">
+							<a href ng-click="tab.setTab(2)">Plot Summary</a></li>
+						<li ng-class="{ active: tab.isSet(3) }">
+							<a href ng-click="tab.setTab(3)">Reviews</a></li>
+						<li ng-hide="tab.isSet(0)">
+							<a href ng-click="tab.setTab(0)">Minimize</a></li>
+					</ul><!-- end nav pills -->
+					
+		<!-- Movie Info tab -->
+					<film-info ng-show="tab.isSet(1)"></film-info>
+
+		<!-- Movie Plot Tab -->			
+					<film-plot ng-show="tab.isSet(2)"></film-plot>
+
+		<!-- Review tab -->
+					<film-reviews ng-show="tab.isSet(3)"></film-reviews>
+		</section>
+						

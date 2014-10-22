@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app="moviePage">
+	<head>
+		<link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+		<style>
+			.lilPic{
+				height: 150px;
+			}
+		</style>
+		<script type="text/javascript" src="angular.min.js"></script>
+		<script type="text/javascript" src="app.js"></script>
+		<script type="text/javascript" src="films.js"></script>
+	</head>
+	<body class="container" ng-controller="PageController as page">
+
+		<!-- Page Header -->
+		<header>
+			<h1 class="text-center">Movie Picks</h1>
+			<h2 class="text-center">Angular.js</h2>
+		</header>
+		<!-- Films Container -->
+		<div class="list-group">
+		<!-- Film Container -->
+			<div class="list-group-item" ng-repeat="film in page.films">
+				<h2>{{film.title}}</h2>
+				
+			
+		<!-- Image Gallery -->
+				<film-gallery></film-gallery> 
+
+		<!-- Tabs -->
+				<film-tabs></film-tabs>
+
+			</div><!-- end film container -->
+			
+		</div><!-- end films container -->
+		
+	</body>
+</html>
+
+

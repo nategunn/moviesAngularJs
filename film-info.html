@@ -1,0 +1,16 @@
+<!-- Movie Info tab -->
+<div ng-show="tab.isSet(1)">
+	<h4>Starring: </h4>
+	<ul class="list-unstyled">
+		<li ng-repeat="star in film.starring">
+			{{star}}
+		</li>
+	</ul><!-- end star list -->
+	<h4>Directed by:</h4>
+	{{film.director}} 
+	<h4>Theatrical Release:</h4>
+	{{film.year}}
+	<h4>Box Office Earnings:</h4>
+	{{film.boxOffice}}
+	
+</div><!-- end movie info tab -->

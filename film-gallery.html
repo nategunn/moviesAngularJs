@@ -1,0 +1,8 @@
+<!-- film gallery -->
+<section ng-show="film.images.length">
+	<ul class="list-inline">
+	  <li img="small-image pull-left" ng-repeat="image in film.images">
+		<img class="lilPic" ng-src="{{image}}" />
+	  </li>
+	</ul>
+</section>
